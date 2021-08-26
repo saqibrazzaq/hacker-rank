@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HackerRank.DataStructures.Arrays;
+using System;
 
 namespace HackerRank
 {
@@ -6,7 +7,7 @@ namespace HackerRank
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            TwoDArrayDS.Test();
         }
     }
 }
