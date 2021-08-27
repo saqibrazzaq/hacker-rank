@@ -7,7 +7,7 @@ namespace HackerRank
     {
         static void Main(string[] args)
         {
-            TwoDArrayDS.Test();
+            SparseArrays.Test();
         }
     }
 }
