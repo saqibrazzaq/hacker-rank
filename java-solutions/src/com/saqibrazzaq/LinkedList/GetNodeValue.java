@@ -1,9 +1,10 @@
 package com.saqibrazzaq.LinkedList;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-class Comparetwolinkedlists {
-
+public class GetNodeValue {
     private static class SinglyLinkedListNode {
         public int data;
         public SinglyLinkedListNode next;
@@ -38,45 +39,47 @@ class Comparetwolinkedlists {
 
     public static void printSinglyLinkedList(SinglyLinkedListNode node, String sep) throws IOException {
         while (node != null) {
-            System.out.println(String.valueOf(node.data));
+            System.out.print(String.valueOf(node.data));
 
             node = node.next;
 
             if (node != null) {
-                System.out.println(sep);
+                System.out.print(sep);
             }
         }
     }
 
-    static boolean compareLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
-        SinglyLinkedListNode current1 = head1;
-        SinglyLinkedListNode current2 = head2;
-        // Traverse the first list
-        while(current1 != null) {
-            if (current2 == null) return false;
+    public static int getNode(SinglyLinkedListNode llist, int positionFromTail) {
+        // Write your code here
+        int size = 0;
+        // Store items in the array
+        List<Integer> arr = new ArrayList<>();
 
-            if (current1.data != current2.data)
-                return false;
-
-            current1 = current1.next;
-            current2 = current2.next;
+        SinglyLinkedListNode current = llist;
+        // Traverse the linked list till the end, to measure the size
+        while (current != null)
+        {
+            arr.add(current.data);
+            size++;
+            current = current.next;
         }
-        return true;
+
+        return arr.get(size - positionFromTail - 1);
     }
 
-    public static void main(String[] args) {
-        SinglyLinkedList llist1 = new SinglyLinkedList();
-        llist1.insertNode(1);
-        llist1.insertNode(2);
-        llist1.insertNode(3);
-        llist1.insertNode(4);
+    public static void main(String[] args) throws IOException {
+        SinglyLinkedList llist = new SinglyLinkedList();
 
-        SinglyLinkedList llist2 = new SinglyLinkedList();
-        llist2.insertNode(1);
-        llist2.insertNode(2);
-        llist2.insertNode(3);
+        int llistCount = 3;
+//        llist.insertNode(3);
+//        llist.insertNode(2);
+        llist.insertNode(1);
 
-        boolean result = compareLists(llist1.head, llist2.head);
-        System.out.println(String.valueOf(result ? 1 : 0));
+        int position = 0;
+
+        int result = getNode(llist.head, position);
+
+        System.out.print(String.valueOf(result));
+        System.out.println();
     }
 }
