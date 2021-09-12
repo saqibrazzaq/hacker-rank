@@ -1,4 +1,5 @@
-﻿using HackerRank.DataStructures.Arrays;
+﻿using HackerRank.Algorithms.Warmup;
+using HackerRank.DataStructures.Arrays;
 using HackerRank.DataStructures.LinkedList;
 using HackerRank.DataStructures.Stack;
 using System;
@@ -9,7 +10,7 @@ namespace HackerRank
     {
         static void Main(string[] args)
         {
-            SimpleTextEditor.Test();
+            MiniMaxSum.Test();
         }
     }
 }
