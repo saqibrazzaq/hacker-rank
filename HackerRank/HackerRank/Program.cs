@@ -1,4 +1,5 @@
 ﻿using HackerRank.Algorithms.Implementation;
+using HackerRank.Algorithms.RestAPI;
 using HackerRank.Algorithms.Warmup;
 using HackerRank.DataStructures.Arrays;
 using HackerRank.DataStructures.LinkedList;
@@ -11,7 +12,7 @@ namespace HackerRank
     {
         static void Main(string[] args)
         {
-            DesignerPDFViewer.Test();
+            Test1.Test();
         }
     }
 }

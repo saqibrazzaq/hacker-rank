@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+    
+    <script>
+    
+        function beautifulDays(i, j, k) {
+            // Write your code here
+            var count = 0;
+            for (var num = i; num <= j; num++) {
+                var reverse = isBeautiful(num, k);
+                if (reverse == true) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        
+        function isBeautiful (num, k) {
+            // Get reverse string
+            var strReverse = num.toString().split("").reverse().join("");
+            var result = (num - strReverse) % k;
+            return result == 0 ? true : false;
+        }
+        
+        console.log(beautifulDays(20, 23, 6));
+        
+    </script>
+
+</body>
+</html>

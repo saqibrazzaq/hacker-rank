@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+    
+    <script>
+    
+        function angryProfessor(k, a) {
+            // Write your code here
+            // Sort the array
+            var lateArray = a.filter(function(item) {
+                return item <= 0;
+            });
+            //console.log(lateArray.length);
+            return lateArray.length >= k ? "NO" : "YES";
+        }
+        
+        console.log(angryProfessor(2, new Array (0, -1, 2, 1)));
+        
+    </script>
+
+</body>
+</html>
